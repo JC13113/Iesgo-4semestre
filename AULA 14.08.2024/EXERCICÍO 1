@@ -1,0 +1,30 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        //Solicitar o nome do funcionario
+        Console.WriteLine("Olá Funcionario, Digite seu nome: ");
+        string Func = Console.ReadLine();
+        
+        //Solicitar as horas trabalhada
+        Console.WriteLine("Agora digite a sua cagar horaria semanal");
+        int horaSemana = Convert.ToInt32(Console.ReadLine());
+        
+        //Solicitar a taxa pagamento por hora
+        Console.WriteLine("Agora digite sua taxa de pagamento por horas trabalhadas");
+        double taxaPagamento = Convert.ToInt32(Console.ReadLine());
+        
+        //Solicitar a comissão
+        Console.WriteLine("Por ultimo, digite o valor das comissões recebidas na semana");
+        decimal comissao = Convert.ToInt32(Console.ReadLine());
+        
+        //Calculo do salario bruto
+        decimal salarioBruto = (decimal)(horaSemana * taxaPagamento) + comissao;
+        
+        //Exibir o resultado
+        Console.WriteLine($"Funcionario {Func} o seu Salario Bruto é {salarioBruto}");
+    }
+    
+}
